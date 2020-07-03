@@ -44,6 +44,6 @@ bot
       ctx.reply('Такой страны нет! Для списка посмотрите /help');
     }
   })
-  .listen(process.env.PORT || 5000);
+  .listen(process.env.PORT || 33500);
 bot.launch();
 console.log(`Бот успешно запустился в ${new Date()}`);
