@@ -23,27 +23,27 @@ bot.start((ctx) =>
 
 bot.help((ctx) => ctx.reply(COUNTRIES_LIST));
 
-bot
-  .on('text', async (ctx) => {
-    let data = {};
-    try {
-      data = await api.getReportsByCountries(ctx.message.text);
+bot.on('text', async (ctx) => {
+  let data = {};
+  try {
+    data = await api.getReportsByCountries(ctx.message.text);
 
-      const formatData = `
+    const formatData = `
 Страна ${data[0][0].country}
 Случаи: ${data[0][0].cases}
 Смерти: ${data[0][0].deaths}
 Вылечились: ${data[0][0].recovered}
   `;
-      ctx.reply(formatData);
-      console.log(`Выбрана страна: ${ctx.message.text} время ${new Date()}`);
-    } catch (err) {
-      console.log(err);
-      console.log('Кривое название страны');
-      console.log(ctx.message.text);
-      ctx.reply('Такой страны нет! Для списка посмотрите /help');
-    }
-  })
-  .listen(process.env.PORT || 33500);
+    ctx.reply(formatData);
+    console.log(`Выбрана страна: ${ctx.message.text} время ${new Date()}`);
+  } catch (err) {
+    console.log(err);
+    console.log('Кривое название страны');
+    console.log(ctx.message.text);
+    ctx.reply('Такой страны нет! Для списка посмотрите /help');
+  }
+});
+
+// bot.listen(process.env.PORT || 33500);
 bot.launch();
 console.log(`Бот успешно запустился в ${new Date()}`);
