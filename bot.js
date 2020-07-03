@@ -35,6 +35,7 @@ bot.on('text', async (ctx) => {
 Вылечились: ${data[0][0].recovered}
   `;
     ctx.reply(formatData);
+    console.log(`Выбрана страна: ${ctx.message.text} время ${new Date()}`);
   } catch (err) {
     console.log(err);
     console.log('Кривое название страны');
@@ -45,3 +46,4 @@ bot.on('text', async (ctx) => {
 
 bot.hears('hi', (ctx) => ctx.reply('Hey there'));
 bot.launch();
+console.log(`Бот успешно запустился в ${new Date()}`);
