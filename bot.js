@@ -43,7 +43,5 @@ bot.on('text', async (ctx) => {
     ctx.reply('Такой страны нет! Для списка посмотрите /help');
   }
 });
-
-bot.hears('hi', (ctx) => ctx.reply('Hey there'));
 bot.launch();
 console.log(`Бот успешно запустился в ${new Date()}`);
