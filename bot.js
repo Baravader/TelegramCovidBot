@@ -16,7 +16,6 @@ http
   .listen(process.env.PORT || 3000);
 console.log(`listener port is ${PORT}`);
 
-
 const bot = new Telegraf(process.env.TOKEN);
 bot.start((ctx) =>
   ctx.reply(
@@ -60,4 +59,4 @@ bot.on('text', async (ctx) => {
 // app.listen(process.env.PORT || 3000);
 // bot.listen(process.env.PORT || 33500);
 bot.launch();
-console.log(`Бот успешно запустился в ${new Date().toLocaleDateString('ru-RU')}`);
+console.log(`Бот успешно запустился в ${new Date().toUTCString()}`);
