@@ -5,6 +5,8 @@ const markup = require('telegraf/markup');
 const http = require('http');
 const COUNTRIES_LIST = require('./constants');
 
+const PORT = process.env.PORT || 3000;
+
 http
   .createServer(function (req, res) {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -12,6 +14,8 @@ http
     res.end();
   })
   .listen(process.env.PORT || 3000);
+console.log(`listener port is ${PORT}`);
+
 
 const bot = new Telegraf(process.env.TOKEN);
 bot.start((ctx) =>
@@ -57,4 +61,3 @@ bot.on('text', async (ctx) => {
 // bot.listen(process.env.PORT || 33500);
 bot.launch();
 console.log(`Бот успешно запустился в ${new Date()}`);
-
