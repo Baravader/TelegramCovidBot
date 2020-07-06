@@ -1,4 +1,4 @@
-require('dotenv').config();
+let app = require('dotenv').config();
 const Telegraf = require('telegraf');
 const api = require('covid19-api');
 const markup = require('telegraf/markup');
@@ -44,7 +44,7 @@ bot.on('text', async (ctx) => {
   }
 });
 
-Telegraf.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000);
 
 // bot.listen(process.env.PORT || 33500);
 bot.launch();
