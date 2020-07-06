@@ -1,4 +1,4 @@
-let app = require('dotenv').config();
+const app = require('dotenv').config();
 const Telegraf = require('telegraf');
 const api = require('covid19-api');
 const markup = require('telegraf/markup');
