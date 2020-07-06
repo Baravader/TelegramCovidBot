@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "ttsstt",
-    "start": "npm run build && node bot.js"
+    "postinstall": "npm run build",
+    "start": "node bot.js"
   },
   "author": "Baram4ik",
   "license": "ISC",
