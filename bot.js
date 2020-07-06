@@ -48,3 +48,4 @@ bot.on('text', async (ctx) => {
 // bot.listen(process.env.PORT || 33500);
 bot.launch();
 console.log(`Бот успешно запустился в ${new Date()}`);
+

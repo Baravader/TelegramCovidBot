@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ttsstt",
-    "start": "set PORT =3000 && node bot.js"
+    "start": "set PORT = process.env.PORT && node bot.js"
   },
   "author": "Baram4ik",
   "license": "ISC",
