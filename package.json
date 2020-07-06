@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ttsstt",
-    "postinstall": "npm run build",
-    "start": "node bot.js"
+    "start": "set PORT =3000 && node bot.js"
   },
   "author": "Baram4ik",
   "license": "ISC",
